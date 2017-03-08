@@ -1,0 +1,321 @@
+body {
+  background: linear-gradient(
+    to left, 
+    #ff9e2c 0%, 
+    #ff9e2c 50%, 
+    #b6701e 50%, 
+    #b6701e 100%
+  );
+}
+
+.container2 {
+  background: linear-gradient(
+    to left, 
+    #ff9e2c 0%, 
+    #ff9e2c 50%, 
+    #b6701e 50%, 
+    #b6701e 100%
+  );
+}
+
+#visualization {
+  overflow: visible;
+}
+
+p {
+	text-align: left;
+	float: left;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+h1 {
+  text-align: left;
+  float: left;
+  margin-top: 10px;
+  font-size: 70px;
+}
+
+h2 {
+  position: relative;
+  text-align: right;
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: 0.5em;
+  margin-right: 150px;
+  margin-top: 8px;
+  color: #b6701e;
+}
+
+textarea {
+  width: 98%;
+  height: 200px;
+}
+
+fieldset {
+	text-align: center;
+}
+
+.bg-text1::after {
+    color: #ff9e2c;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 80px;
+    line-height: 2;
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    overflow: hidden
+}
+
+.bg-text2::after {
+    color: #b6701e;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 80px;
+    line-height: 2;
+    position: absolute;
+    top: 150px;
+    right: 250px;
+    overflow: hidden
+}
+
+.bg-text4::after {
+    color: #ffc266;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 30px;
+    line-height: 2;
+    position: absolute;
+    top: 125px;
+    right: 860px;
+    overflow: hidden
+}
+
+.bg-text5::after {
+    color: #ffc266;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 30px;
+    line-height: 2;
+    position: absolute;
+    top : 750px;
+    right: 888px;
+    overflow: hidden
+}
+
+.bg-text6::after {
+    color: #ffc266;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 30px;
+    line-height: 2;
+    position: absolute;
+    top: 455px;
+    right: 540px;
+    overflow: hidden;
+}
+
+.bg-text7::after {
+    color: #ffc266;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 30px;
+    line-height: 2;
+    position: absolute;
+    top: 470px;
+    left: 480px;
+    overflow: hidden
+}
+
+.bg-text3 {
+    color: #b6701e;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 40px;
+    line-height: 2;
+    position: absolute;
+    bottom: 100px;
+    right: 80px;
+    overflow: hidden
+}
+
+#r0{
+    width:35px;
+    height:35px;
+    background:#b3ecff;
+    position: absolute;
+    bottom: 520px;
+    left: 110px;
+    overflow: hidden
+}
+
+.l0::after {
+    color: #b3ecff;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    bottom: 520px;
+    left: 150px;
+    overflow: hidden
+}
+
+#r1{
+    width:35px;
+    height:35px;
+    background:#FCCDE5;
+    position: absolute;
+    bottom: 450px;
+    left: 110px;
+    overflow: hidden
+}
+
+.l1::after {
+    color: #FCCDE5;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    bottom: 450px;
+    left: 150px;
+    overflow: hidden
+}
+
+#r2{
+    width:35px;
+    height:35px;
+    background:#ffff99;
+    position: absolute;
+    bottom: 380px;
+    left: 110px;
+    overflow: hidden
+}
+
+.l2::after {
+    color: #ffff99;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    bottom: 380px;
+    left: 150px;
+    overflow: hidden
+}
+
+#r3{
+    width:35px;
+    height:35px;
+    background:#ccff66;
+    position: absolute;
+    bottom: 310px;
+    left: 110px;
+    overflow: hidden
+}
+
+.l3::after {
+    color: #ccff66;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    bottom: 310px;
+    left: 150px;
+    overflow: hidden
+}
+
+#r4{
+    width:35px;
+    height:35px;
+    background:#ff6633;
+    position: absolute;
+    bottom: 240px;
+    left: 110px;
+    overflow: hidden
+}
+
+.l4::after {
+    color: #ff6633;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    bottom: 240px;
+    left: 150px;
+    overflow: hidden
+}
+
+#r5{
+    width:35px;
+    height:35px;
+    background: red;
+    position: absolute;
+    bottom: 170px;
+    left: 110px;
+    overflow: hidden
+}
+
+.l5::after {
+    color: red;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    bottom: 170px;
+    left: 150px;
+    overflow: hidden
+}
+
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+}
+
+.c1{
+    width: 20px;
+    height: 20px;
+    background: #FCCDE5;
+    position: absolute;
+    bottom: 100px;
+    left: 170px;
+    overflow: hidden
+}
+
+.c2{
+    width: 40px;
+    height: 40px;
+    background: #FCCDE5;
+    position: absolute;
+    bottom: 90px;
+    left: 230px;
+    overflow: hidden
+}
+
+.c3{
+    width: 60px;
+    height: 60px;
+    background: #FCCDE5;
+    position: absolute;
+    bottom: 80px;
+    left: 310px;
+    overflow: hidden
+}
+
+.steps::after{
+    color: #FCCDE5;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    bottom: 48px;
+    left: 50px;
+    overflow: hidden
+}
+

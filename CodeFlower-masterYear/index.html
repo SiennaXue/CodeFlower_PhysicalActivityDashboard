@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <!-- Use the Source, Luke -->
+  <div class="container2">
+  <head>
+    <title>CodeFlower Source code visualization</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Rosario:400,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
+   
+    <style type="text/css">
+circle.node {
+  cursor: pointer;
+  stroke: #000;
+  stroke-width: .5px;
+}
+
+circle.node.directory {
+  stroke: #9ecae1;
+  stroke-width: 2px;
+}
+
+circle.node.collapsed {
+  stroke: #555;
+}
+
+.nodetext {
+  fill: #babdc1;
+  font-weight: bold;
+  text-shadow: 0 0 0.2 white;
+}
+
+line.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
+
+    </style>
+  </head>
+  
+  <body>
+    <h1 >Visualize a Year</h1>
+    <p text-align="left" float="left" margin-top="10px">This visualisation shows your step count and heart rate in a year. <br />The step count is represented by node size, the heart rate is represented by node color. </p>
+    
+    <div class="content">
+      <div class="container">
+        <div id="visualization"  ></div>
+        <div id="test"></div>
+      </div>
+    </div>
+    
+    <div class="bg-text1" data-bg-text="Night"></div>
+    <div class="bg-text2" data-bg-text="Day"> </div>
+    <div class="bg-text4" data-bg-text="December"> </div>
+    <div class="bg-text5" data-bg-text="June"> </div>
+    <div class="bg-text6" data-bg-text="March"> </div>
+    <div class="bg-text7" data-bg-text="Spetember"> </div>
+    
+    <div class="flowerDiv1"></div>
+
+    <div class="bg-text3" data-bg-text="Month"> 
+      <div id="tooltip1" data-bg-text="Day"> </div>
+      <div id="tooltip2" data-bg-text="Step Count"></div>
+      <div id="tooltip3" data-bg-text="Heart Rate"></div>
+    </div>
+
+
+    <div class="l0" data-bg-text="Sedentary <104 bpm">
+      <div id="r0"></div>
+    </div>
+
+    <div class="l1" data-bg-text="Very Light 104-114 bpm">
+      <div id="r1"></div>
+    </div>
+
+    <div class="l2" data-bg-text="Light 114-133 bpm">
+      <div id="r2"></div>
+    </div>
+
+    <div class="l3" data-bg-text="Moderate 133-152 bpm">
+      <div id="r3"></div>
+    </div>
+
+    <div class="l4" data-bg-text="Hard 152-171 bpm">
+      <div id="r4"></div>
+    </div>
+
+    <div class="l5" data-bg-text="Maximum 171-190 bpm">
+      <div id="r5"></div>
+    </div>
+
+    <div class="circleBase c1"></div>
+    <div class="circleBase c2"></div>
+    <div class="circleBase c3"></div>
+    <div class="steps" data-bg-text="Step Count: 10K &nbsp&nbsp&nbsp 25K &nbsp&nbsp&nbsp&nbsp 50K "> </div>
+  
+
+    
+    <script type="text/javascript" src="javascripts/d3/d3.js"></script>
+    <script type="text/javascript" src="javascripts/d3/d3.geom.js"></script>
+    <script type="text/javascript" src="javascripts/d3/d3.layout.js"></script>
+    <script type="text/javascript" src="javascripts/CodeFlower.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="javascripts/dataConverter.js"></script>
+    <script type="text/javascript">
+      var currentCodeFlower;
+      var createCodeFlower = function(json) {
+        // remove previous flower to save memory
+        if (currentCodeFlower) currentCodeFlower.cleanup();
+        // adapt layout size to the total number of elements
+        var total = countElements(json);
+        w = parseInt(Math.sqrt(total) * 41, 10);
+        h = parseInt(Math.sqrt(total) * 41, 10);
+        // create a new CodeFlower
+        currentCodeFlower = new CodeFlower("#visualization", w, h).update(json);
+      };
+
+      d3.json('/data/fitYear.json', createCodeFlower);
+    </script>
+  
+    <script type="text/javascript"> </script>
+
+
+
+
+  </body>
+  </div>
+</html>
